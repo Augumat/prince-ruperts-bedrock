@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "princerupertsbedrock:block/bedrock_tail"
+    }
+  }
+}
