@@ -16,7 +16,7 @@ public class ModBlocks {
 
     public static final Block BEDROCK_TAIL = registerBlock("bedrock_tail", new Block(FabricBlockSettings
             .of(Material.STONE)
-            .strength(-1.0f, 2400.0f)
+            .strength(-1.0f, 4800.0f)
             .requiresTool()
             .dropsNothing()
     ));

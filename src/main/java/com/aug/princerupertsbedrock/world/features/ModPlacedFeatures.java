@@ -2,6 +2,7 @@ package com.aug.princerupertsbedrock.world.features;
 
 import com.aug.princerupertsbedrock.PrinceRupertsBedrock;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
@@ -17,12 +18,14 @@ public class ModPlacedFeatures {
 
     public static PlacedFeature OVERWORLD_BEDROCK_TAIL_PLACED = register(
             ModConfiguredFeatures.BEDROCK_TAIL.withPlacement(
+                    RandomOffsetPlacementModifier.horizontally(UniformIntProvider.create(0, 15)),
                     HeightRangePlacementModifier.trapezoid(YOffset.getBottom(), YOffset.aboveBottom(4))
             ),
             OVERWORLD_BEDROCK_TAIL_PLACED_KEY
     );
     public static PlacedFeature NETHER_BEDROCK_TAIL_PLACED = register(
             ModConfiguredFeatures.BEDROCK_TAIL.withPlacement(
+                    RandomOffsetPlacementModifier.horizontally(UniformIntProvider.create(0, 15)),
                     HeightRangePlacementModifier.trapezoid(YOffset.getBottom(), YOffset.aboveBottom(4)),
                     HeightRangePlacementModifier.trapezoid(YOffset.getTop(), YOffset.belowTop(4))
             ),
